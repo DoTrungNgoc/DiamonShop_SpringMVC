@@ -1,0 +1,22 @@
+SELECT
+p.id as id_product,
+p.id_category,
+p.sizes,
+p.name,
+p.price,
+p.sale,
+p.title,
+p.highlight,
+p.new_product,
+p.details,
+c.id AS id_color,
+c.name AS name_color,
+c.code AS code_color,
+c.img,
+p.created_at,
+p.updated_at
+FROM
+products AS p
+INNER JOIN
+colors AS c
+ON p.id = c.id_product
